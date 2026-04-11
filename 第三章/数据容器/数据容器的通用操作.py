@@ -1,0 +1,60 @@
+
+# 以下五个函数：既能定义对象的空容器，又能将其他类型转换为对应的数据类型
+# 1.list函数： 1、定义空列表  2、将可迭代对象转换为列表
+l1 = list((10,20,30,60,50))
+l2 = list({10,20,30,60,50})
+l3 = list("hello!")
+l4 = list({'张三':20,'李四':50})
+l5 = list(range(8))
+print(l1,type(l1))
+print(l2,type(l2))
+print(l3,type(l3))
+print(l4,type(l4))
+print(l5,type(l5))
+print()
+# 2.tuple函数： 1、定义空元组  2、将可迭代对象转换为元组
+t1 = tuple([10,20,30,60,50])
+t2 = tuple({10,20,30,60,50})
+t3 = tuple("hello!")
+t4 = tuple({'张三':20,'李四':50})
+t5 = tuple(range(8))
+print(t1,type(t1))
+print(t2,type(t2))
+print(t3,type(t3))
+print(t4,type(t4))
+print(t5,type(t5))
+print()
+# 3.set函数： 1、定义空集合  2、将可迭代对象转换为集合
+s3 = set("hello!")
+s4 = set({'张三':20,'李四':50})
+s5 = set(range(8))
+print(s3,type(s3))
+print(s4,type(s4))
+print(s5,type(s5))
+print()
+# 4.dict函数： 1、定义空字典  2、将可迭代对象转换为字典
+# 备注：交给dict函数的内容必须是键值对才可以，否则会报错
+d1 = dict([('张三',90),('李四',80)])
+d2 = dict((('张三',90),('李四',80)))
+print(d1,type(d1))
+print(d2,type(d2))
+print()
+# 5.str函数： 1、定义空字符串  2、将任意类型转换为字符串
+t1 = str([10,20,30,60,50])
+t2 = str({10,20,30,60,50})
+t3 = str("hello!")
+t4 = str({'张三':20,'李四':50})
+# 注意：range是惰性的，需要用到里面的内容时，才会将数字填入进去，没有用到时显示的是起始和结束元素
+t5 = str(range(8))
+t6 = str(False)
+t7 = str(None)
+print(t1,type(t1))
+print(t2,type(t2))
+print(t3,type(t3))
+print(t4,type(t4))
+print(t5,type(t5))
+print(t6,type(t6))
+print(t7,type(t7))
+print()
+
+# 所有的数据容器都支持成员运算符 in/not in ：判断某个元素是否在容器中
