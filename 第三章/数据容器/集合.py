@@ -79,7 +79,56 @@ print(result2)
 # 判断 20元素是否不在集合中
 result3 = 20 not in s4
 print(result3)
+print()
 
+# 常用方法
+# 1、集合A.difference(集合B)--- 找出集合A中不同集合B的元素，返回一个新集合
+s1 = {10,20,30,60,70}
+s2 = {90,50,60,70,55}
+result3 = s1.difference(s2)
+print(result3)
+# 2、集合A.difference_update(集合B)----从集合A中，删除集合B中存在的元素，会修改集合A
+s1 = {10,20,30,60,70}
+s2 = {90,50,60,70,55}
+s1.difference_update(s2)
+print(s1)
+# 3、集合A.union(集合B)----合并两个集合，返回一个新集合
+s1 = {10,20,30,60,70}
+s2 = {90,50,60,70,55}
+s3 = s1.union(s2)
+print(s3)
+# 4、集合A.issubset(集合B)---判断集合A是否为集合B的子集，是返回True
+s1 = {10,20,30,60,70}
+s2 = {90,50,60,70,55}
+s3 = {30,60}
+print(s3.issubset(s1))
+print(s3.issubset(s2))
+# 5、集合A.issuperset(集合B)---判断集合A是否为集合B的超集，是返回True
+print(s1.issuperset(s3))
+print(s2.issuperset(s3))
+# 6、集合A.isdisjoint(集合B)---判断集合A和集合B是否没有交集，没有交集返回True
+print(s1.isdisjoint(s2))
+print()
+
+
+# 数学运算
+s1 = {10,20,30,60,70}
+s2 = {90,50,60,70,55}
+# 1、并集-----集合A | 集合B        取两个集合中的元素
+print(s1|s2)
+# 2、交集-----集合A & 集合B      取两个集合一样的元素
+print(s1 & s2)
+# 3、差集-----集合A - 集合B        取只有集合A中有的数据
+print(s1-s2)
+# 4、对称差集----集合A ^ 集合B   取集合A和集合B中不一样的元素
+print(s1 ^ s2)
+print()
+
+# 循环
+# 集合可以使用for循环但不能使用while循环
+s1 = {10,20,30,60,70}
+for item in s1:
+    print(item)
 
 
 
